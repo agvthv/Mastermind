@@ -1,25 +1,13 @@
 package mastermind.Player;
 
-import jakarta.persistence.*;
+import java.util.Scanner;
 
-@Entity
-@DiscriminatorValue("MULTI")
-public class MultiPlayer extends Player
-{
-    String playerName2;
-    public MultiPlayer(String playerName, int playerScore, String playerName2)
-    {
-        super(playerName, playerScore);
-        this.playerName2 = playerName2;
-    }
+public class MultiPlayer extends Player {
 
-    public String getPlayerName2()
-    {
-        return playerName2;
-    }
-
-    public void setPlayerName2(String playerName2)
-    {
-        this.playerName2 = playerName2;
+    public MultiPlayer() {
+        super();
     }
 }
+
+
+

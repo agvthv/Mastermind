@@ -1,14 +1,10 @@
 package mastermind.Player;
 
-import jakarta.persistence.*;
+import java.util.Scanner;
 
-@Entity
-@DiscriminatorValue("SINGLE")
-public class SinglePlayer extends Player
-{
-        public SinglePlayer(String playerName, int playerScore){
-            super(playerName, playerScore);
-        }
+public class SinglePlayer extends Player {
 
+    public SinglePlayer() {
+        super();
+    }
 }
-

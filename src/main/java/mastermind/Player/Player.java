@@ -1,47 +1,29 @@
 package mastermind.Player;
 
-import jakarta.persistence.*;
 import java.util.Scanner;
 
-@Entity
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name = "player_type", discriminatorType = DiscriminatorType.STRING)
-@Table(name = "Scoreboard")
-public abstract class Player
-{
-    @Id
-    @Column(nullable = false, unique = true)
+public abstract class Player {
+
     private String playerName;
 
-    @Column(nullable = false)
-    private int playerScore;
-
-    public Player(String getName, int playerScore)
-    {
-        this.playerName = getName;
-        this.playerScore = 0;
+    public Player() {
+        this.playerName= "";
     }
 
-    public String getPlayerName()
-    {
+    public String getPlayerName() {
         return playerName;
     }
 
-    public void setPlayerName(String getPlayerName)
-    {
+    public void setPlayerName(String playerName) {
         this.playerName = playerName;
     }
 
-    public int getPlayerScore()
-    {
-        return playerScore;
-    }
-
-    public void recordName(){
+    public void createPlayer(){
         Scanner userInput = new Scanner(System.in);
-        System.out.println("What is your name?: ");
-        String playerName = userInput.nextLine();
-
-    }
-
+        System.out.println("Player name: ");
+        String name = userInput.nextLine();
+        this.setPlayerName(name);
+        System.out.println("\nPlayer created: " + this.getPlayerName());
+        System.out.println("-".repeat(15)+ "\n");
+    };
 }
