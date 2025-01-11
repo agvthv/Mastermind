@@ -12,7 +12,7 @@ Welcome to **Mastermind**, the classic code-breaking game brought to life in Jav
 
 ### **Clone the Repository**
 ```bash
-git clone <your-repository-url>
+gh repo clone agvthv/Mastermind
 cd Mastermind
 ```
 ---
