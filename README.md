@@ -14,6 +14,8 @@ Welcome to **Mastermind**, the classic code-breaking game brought to life in Jav
 ```bash
 gh repo clone agvthv/Mastermind
 cd Mastermind
+or
+git clone https://github.com/agvthv/Mastermind.git
 ```
 ---
 ## **Project Overview**
